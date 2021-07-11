@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: ./app/src/lib/selenium-server-standalone-3.141.59.jar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/src/lib/selenium-server-standalone-3.141.59.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

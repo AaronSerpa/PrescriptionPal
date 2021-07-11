@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PrescriptionDetail">
+
+    <include layout="@layout/top_bar"/>
+
+    <TextView
+        android:id="@+id/detail_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_below="@+id/mToolbar"
+        android:text="Prescription Name: "
+        android:textSize="20dp"/>
+
+    <EditText
+        android:id="@+id/detail_name_entry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_below="@+id/detail_name"
+        />
+
+    <TextView
+        android:id="@+id/detail_RX"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/detail_name_entry"
+        android:text="Prescription RX#: "
+        android:textSize="20dp"/>
+
+    <EditText
+        android:id="@+id/detail_RX_entry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_below="@+id/detail_RX"
+        />
+
+    <TextView
+        android:id="@+id/detail_patient"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/detail_RX_entry"
+        android:text="For patient: "
+        android:textSize="20dp"/>
+
+    <EditText
+        android:id="@+id/detail_patient_entry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_below="@+id/detail_patient"
+        />
+
+    <TextView
+        android:id="@+id/detail_refills"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/detail_patient_entry"
+        android:text="Number of Refills Left: "
+        android:textSize="20dp"/>
+
+    <EditText
+        android:id="@+id/detail_refills_entry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_below="@+id/detail_refills"
+        />
+
+    <Button
+        android:id="@+id/button_update_prescription"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/button_delete_prescription"
+        android:layout_marginBottom="30dp"
+        android:layout_centerHorizontal="true"
+        android:text="Update"
+        android:onClick="updatePrescription"/>
+
+    <Button
+        android:id="@+id/button_delete_prescription"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="100dp"
+        android:layout_centerHorizontal="true"
+        android:text="Delete"
+        android:onClick="deletePrescription"/>
+
+</RelativeLayout>

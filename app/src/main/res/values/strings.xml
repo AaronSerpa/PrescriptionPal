@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">PrescriptionPal</string>
+    <string name="title_activity_init_acc_type">InitAccType</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="patient">Patient</string>
+    <string name="pharmacist">Pharmacist</string>
+    <string name="doctor">Doctor</string>
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_activity_main2">MainActivity</string>
+    <string name="title_activity_initial_loggedin_screen">InitialLoggedinScreen</string>
+    <string name="title_activity_preferences">Preferences</string>
+    <string name="title_activity_permissions">Permissions</string>
+    <string name="title_activity_notifications">Notifications</string>
+    <string name="title_activity_change_email">ChangeEmail</string>
+    <string name="title_activity_list_of_refills">ListOfRefills</string>
+    <string name="title_activity_list_of_new_prescriptions">ListOfNewPrescriptions</string>
+    <string name="title_activity_doctor_account_page">DoctorAccountPage</string>
+</resources>

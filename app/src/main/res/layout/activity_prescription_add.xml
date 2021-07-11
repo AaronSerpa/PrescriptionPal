@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PrescriptionAdd">
+
+    <include layout="@layout/top_bar"/>
+
+    <TextView
+        android:id="@+id/test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:fontFamily="@font/abril_fatface"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"/>
+
+    <TextView
+        android:id="@+id/textView_add_prescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp"
+        android:text="Add Prescription"
+        android:fontFamily="@font/abril_fatface"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"/>
+
+    <EditText
+        android:id="@+id/prescription_rx"
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView_add_prescription"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:hint="Prescription RX#"
+        android:inputType="text"
+        android:backgroundTint="@color/colorPrimary"/>
+
+    <EditText
+        android:id="@+id/prescription_name"
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/prescription_rx"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:hint="Prescription Name"
+        android:inputType="text"
+        android:backgroundTint="@color/colorPrimary"/>
+
+
+    <EditText
+        android:id="@+id/patient_name"
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/prescription_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:hint="Patient Name"
+        android:inputType="text"
+        android:backgroundTint="@color/colorPrimary"/>
+
+    <EditText
+        android:id="@+id/refill_num"
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/patient_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:hint="# of Refills Left"
+        android:inputType="text"
+        android:backgroundTint="@color/colorPrimary"/>
+
+    <Button
+        android:id="@+id/button_add_prescription"
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/refill_num"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:text="ADD"
+        android:textSize="24sp"
+        android:textColor="#ffffff"
+        android:background="@color/colorPrimary"
+        android:onClick="addPrescription"/>
+
+    <Button
+        android:id="@+id/button_cancel"
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button_add_prescription"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="CANCEL"
+        android:textSize="24sp"
+        android:textColor="#ffffff"
+        android:background="@android:color/darker_gray"
+        android:onClick="cancelAddPrescription"/>
+
+</RelativeLayout>

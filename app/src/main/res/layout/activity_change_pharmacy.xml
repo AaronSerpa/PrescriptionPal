@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChangePharmacy">
+
+    <TextView
+        android:id="@+id/textView_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:text="Change Pharmacy"
+        android:fontFamily="@font/abril_fatface"
+        android:textSize="30dp"
+        android:textColor="@color/colorPrimary"/>
+
+
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView_title"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="30dp"
+        android:inputType="textMultiLine"
+        android:layout_centerHorizontal="true"
+        />
+
+    <ListView
+        android:id="@+id/listView_pharmacy_list"
+        style="@style/Widget.AppCompat.ListView.Menu"
+        android:layout_width="fill_parent"
+        android:layout_height="350dp"
+        android:layout_below="@+id/textView_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:headerDividersEnabled="false"
+        android:inputType="textMultiLine"
+        android:maxLines="4"
+        android:padding="15dp"
+        android:textAlignment="viewStart"
+        android:textColor="@color/colorPrimary"
+        android:textSize="7dp" >
+    </ListView>
+
+    <Button
+        android:id="@+id/button_change_pharmacy_save"
+        android:layout_width="190dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/listView_pharmacy_list"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:background="@color/colorPrimary"
+        android:onClick="saveNewPharmacy"
+        android:text="save"
+        android:textColor="#ffffff"
+        android:textSize="15dp" />
+    <Button
+        android:id="@+id/button_change_pharmacy_back"
+        android:layout_width="190dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/listView_pharmacy_list"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="110dp"
+        android:background="@color/colorPrimary"
+        android:onClick="goBack"
+        android:text="back"
+        android:textColor="#ffffff"
+        android:textSize="15dp" />
+
+</RelativeLayout>

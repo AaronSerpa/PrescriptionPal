@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "110511010967",
+    "project_id": "prescriptionpal-d1b0a",
+    "storage_bucket": "prescriptionpal-d1b0a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:110511010967:android:ac0fc9cc8f324d2ce365d2",
+        "android_client_info": {
+          "package_name": "edu.sjsu.android.prescriptionpal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "110511010967-3reeq2hp20iln90h3nuqr2395i9kdavu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "edu.sjsu.android.prescriptionpal",
+            "certificate_hash": "d4dcf73e2e13a24395dff1f0682c1e2992f116c0"
+          }
+        },
+        {
+          "client_id": "110511010967-v4si3i79hakbsqtlpkilhcpbt5e4f3d3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDR4sqqpfonOHVNlYlAEgOC-Rm6xToVJIk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "110511010967-v4si3i79hakbsqtlpkilhcpbt5e4f3d3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

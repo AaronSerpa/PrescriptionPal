@@ -1,0 +1,67 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    defaultConfig {
+        applicationId "edu.sjsu.android.prescriptionpal"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    configurations {
+        all{
+            exclude group: 'commons-logging', module: 'commons-logging'
+            exclude group: 'com.google.guava', module: 'guava'
+            exclude group: 'com.squareup.okio', module: 'okio'
+        }
+    }
+
+}
+
+dependencies {
+
+//    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'com.google.firebase:firebase-auth:16.0.5'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'androidx.navigation:navigation-fragment:2.3.5'
+    implementation 'androidx.navigation:navigation-ui:2.3.5'
+//    implementation files('src/lib/byte-buddy-1.8.15.jar')
+//    implementation files('src/lib/okhttp-3.11.0.jar')
+//    implementation files('src/lib/okio-1.14.0.jar')
+    implementation files('src/lib/java-client-7.0.0.jar')
+//    implementation files('src/lib/commons-exec-1.3.jar')
+//    implementation files('src/lib/guava-25.0-jre.jar')
+    implementation files('src/lib/selenium-server-standalone-3.141.59.jar')
+    implementation files('src/lib/commons-lang3-3.8.1.jar')
+    implementation files('src/lib/commons-lang3-3.8.1-javadoc.jar')
+    implementation files('src/lib/commons-lang3-3.8.1-sources.jar')
+//    implementation files('src/lib/commons-lang3-3.8.1-test-sources.jar')
+    implementation files('src/lib/commons-lang3-3.8.1-tests.jar')
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation platform('com.google.firebase:firebase-bom:26.8.0')
+    implementation 'com.google.firebase:firebase-firestore'
+    implementation 'com.android.support:multidex:1.0.3'
+}

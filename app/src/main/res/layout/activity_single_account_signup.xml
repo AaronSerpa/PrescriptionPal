@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SingleAccountSignup">
+
+    <Button
+        android:id="@+id/button_single_account_back"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_centerHorizontal="false"
+        android:layout_marginTop="10dp"
+        android:text="Back"
+        android:textSize="24sp"
+        android:textColor="#ffffff"
+        android:background="@color/colorPrimary"/>
+
+    <EditText
+        android:id="@+id/first_name"
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="65dp"
+        android:hint="FIRST NAME"
+        android:backgroundTint="@color/colorPrimary"/>
+
+    <EditText
+        android:id="@+id/last_name"
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/first_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:hint="LAST NAME"
+        android:backgroundTint="@color/colorPrimary"/>
+
+    <EditText
+        android:id="@+id/age"
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/last_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:hint="AGE"
+        android:inputType="number"
+        android:backgroundTint="@color/colorPrimary"/>
+
+    <EditText
+        android:id="@+id/contact_number"
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/age"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:hint="CONTACT NUMBER"
+        android:inputType="phone"
+        android:backgroundTint="@color/colorPrimary"/>
+
+    <EditText
+        android:id="@+id/address"
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/contact_number"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:hint="ADDRESS"
+        android:inputType="textPostalAddress"
+        android:backgroundTint="@color/colorPrimary"/>
+
+    <Spinner
+        android:id="@+id/pharmacy"
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/address"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/colorPrimary"/>
+
+    <Spinner
+        android:id="@+id/doctor"
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pharmacy"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/colorPrimary"/>
+
+    <EditText
+        android:id="@+id/insurance"
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/doctor"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:hint="INSURANCE (optional)"
+        android:inputType="text"
+        android:backgroundTint="@color/colorPrimary"/>
+
+    <EditText
+        android:id="@+id/hsafsa"
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/insurance"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:hint="HSA/FSA ACT # (optional)"
+        android:inputType="text"
+        android:backgroundTint="@color/colorPrimary"/>
+
+    <Button
+        android:id="@+id/add_people"
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/hsafsa"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Add People"
+        android:textSize="24sp"
+        android:textColor="#ffffff"
+        android:background="@color/colorPrimary"/>
+
+    <Button
+        android:id="@+id/button_signup"
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/add_people"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Create Account"
+        android:textSize="24sp"
+        android:textColor="#ffffff"
+        android:background="@color/colorPrimary"/>
+
+
+</RelativeLayout>

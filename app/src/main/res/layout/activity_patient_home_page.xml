@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PatientHomePage">
+
+    <include layout="@layout/toolbar"/>
+
+    <TextView
+        android:id="@+id/textView_show_remainder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show Remainders Here"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp"
+        />
+
+    <com.google.android.material.chip.ChipGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </com.google.android.material.chip.ChipGroup>
+
+    <com.google.android.material.chip.ChipGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </com.google.android.material.chip.ChipGroup>
+
+    <Button
+        android:id="@+id/button_pharmacy"
+        android:layout_width="189dp"
+        android:layout_height="32dp"
+        android:layout_below="@+id/textView_show_remainder"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:background="@color/colorPrimary"
+        android:onClick="goPharmacyPage"
+        android:text="Pharmacy"
+        android:textColor="#ffffff"
+        android:textSize="15sp" />
+
+    <Button
+        android:id="@+id/button_prescription"
+        android:layout_width="189dp"
+        android:layout_height="32dp"
+        android:layout_below="@+id/button_pharmacy"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:background="@color/colorPrimary"
+        android:onClick="goPrescriptionPage"
+        android:text="Prescriptions"
+        android:textColor="#ffffff"
+        android:textSize="15sp" />
+
+    <Button
+        android:id="@+id/button_preference"
+        android:layout_width="189dp"
+        android:layout_height="32dp"
+        android:layout_below="@+id/button_prescription"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:background="@color/colorPrimary"
+        android:onClick="goPreferencePage"
+        android:text="Preference"
+        android:textColor="#ffffff"
+        android:textSize="15sp" />
+
+    <Button
+        android:id="@+id/show_pharmacy_back_button"
+        android:layout_width="189dp"
+        android:layout_height="32dp"
+        android:layout_below="@+id/button_preference"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:text="back"
+        android:textSize="15sp"
+        android:textColor="#ffffff"
+        android:background="@color/colorPrimary"
+        android:onClick="clickOnBack"/>
+
+
+</RelativeLayout>

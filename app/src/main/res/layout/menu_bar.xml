@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/mMenubar"
+    android:background="@color/colorPrimary"
+    android:elevation="4dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="Reminder"
+            android:textSize="12dp"
+            android:background="@android:color/white"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginRight="6dp"
+            android:onClick="navToReminder"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="Prescription"
+            android:textSize="12dp"
+            android:background="@android:color/white"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginRight="6dp"
+            android:onClick="navToPrescription"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="Pharmacy"
+            android:textSize="12dp"
+            android:background="@android:color/white"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginRight="6dp"
+            android:onClick="navToPharmacy"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="Profile"
+            android:textSize="12dp"
+            android:background="@android:color/white"
+            android:textColor="@color/colorPrimary"
+            android:onClick="navToProfile"/>
+    </LinearLayout>
+
+</androidx.appcompat.widget.Toolbar>
