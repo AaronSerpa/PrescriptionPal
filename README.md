@@ -1,26 +1,79 @@
-# 2021-spring-cs160-Zenith
+# PrescriptionPal
 
-Hotlinks: 
+## Developers
 
-Github:
-https://github.com/SiyaPang/2021-spring-cs160-Zenith 
+- Aaron Serpa
+- Alexa Kegarice
+- Ashley Guan
+- Kevin Viet Nguyen
+- Siya Pang
 
-Zenhub: https://app.zenhub.com/workspaces/team-zenith-60244e71ae31a10020c88897/board?repos=337856789
+## Hotlinks 
+(Many of these are private, contact me or any developer if you would like to view)
+- Original Github: https://github.com/SiyaPang/2021-spring-cs160-Zenith 
+- Zenhub: https://app.zenhub.com/workspaces/team-zenith-60244e71ae31a10020c88897/board?repos=337856789
+- Firebase: https://console.firebase.google.com/u/1/project/prescriptionpal-d1b0a/overview  
 
-Firebase:
-https://console.firebase.google.com/u/1/project/prescriptionpal-d1b0a/overview  
+## Description
 
-To whoever is reading this right now, that means you are now in the development team for PrescriptionPal, so congratulations!  You may have several questions right now and hopefully this README will answer many of them and help you get started. First, we recommend that you have both a GitHub account as well as a ZenHub account. The GitHub account will be where many of the code will be uploaded to and reviewed by your fellow developers. For the ZenHub account, it will be where each developer will pick up a task or feature to do and finish and see if the team is making good progress. It is part of the agile/scrum development process that we are doing.
+- PrescriptionPal is an application where customers, doctors, or pharmacies may use to keep track of a patient's prescription and medication in general.
+- This application stores its information into its own database through [Google's Firestore](https://cloud.google.com/firestore)
+- Customers may use this application to easily add prescripitions through their phone so that pharmacies are able to fill/refill for them any time.
+- Pharmacies may use this application to retrieve prescriptions from customers or doctors so that they can properly fill/refill the medication and deliver them to the customer.
+- Doctors may use this application to keep track of their patients and check up on them to see if they are properly taking their medication.
 
-Once you have entered the PrescriptionPal GitHub and picked up a task, it is time to get started. First, let’s go over our branching structure and how to correctly branch off so that we do not mess with each other’s code. The main two branches are the master branch and the features branch. The master branch will be the branch that is released to the public and is what the users will be using. The features branch is the branch where the developers will collaborate their individual branches and make sure that no bugs are found when merged. Once you understand these two branches, then you are free to open up a new branch for your individual feature or whatever you signed up for on the ZenHub. Once you are finished with the task, it is recommended that each developer create a pull request so that other developers are able to check and review your code for any initial bugs. After that is completed and the branch is ready to be merged into the features branch, you are free to do so. If we are preparing to release the current version to the public, but you notice a bug, feel free to create a new mini-branch so that you and other developers can solve the bug and merge back into features! Once the features branch is ready, the team as a whole will decide to merge the features branch into main for the public.
+## Important File Info
 
-![](https://i.imgur.com/vZuhTHh.png)
+- [**Sign-up**](https://github.com/kevinvietnguyen/PrescriptionPalCS160/blob/main/app/src/main/java/edu/sjsu/android/prescriptionpal/Signup.java) :
+  - Allows users of any occupations to register an account into PrescriptionPal
+  - Requires user to input their first and last name, their password, and their email
+  - Once the user has registered, they are able to log-in which is allowed by the [**Login file**](https://github.com/kevinvietnguyen/PrescriptionPalCS160/blob/main/app/src/main/java/edu/sjsu/android/prescriptionpal/Login.java)
+- [**SingleAccountSignup**](https://github.com/kevinvietnguyen/PrescriptionPalCS160/blob/main/app/src/main/java/edu/sjsu/android/prescriptionpal/SingleAccountSignup.java) :
+  - Allows patients to create a patient account into PrescriptionPal
+  - Requires the patient to input information such as their address, contact information, preferred pharmacy, and more
+  - If the user would like to register an additional patient to their account, the [**additional_patient file**](https://github.com/kevinvietnguyen/PrescriptionPalCS160/blob/main/app/src/main/java/edu/sjsu/android/prescriptionpal/additional_patient.java) allows them to fill out an additional form to connect their loved ones to their account
+- [**PatientHomePage**](https://github.com/kevinvietnguyen/PrescriptionPalCS160/blob/main/app/src/main/java/edu/sjsu/android/prescriptionpal/PatientHomePage.java) :
+  - Once patient has successfully registered an account into application, this will be their main home page with three options whenever they log in.
+    - Pharmacy
+    - Preference
+    - Prescription
+  - [**ShowPharmacy**](https://github.com/kevinvietnguyen/PrescriptionPalCS160/blob/main/app/src/main/java/edu/sjsu/android/prescriptionpal/ShowPharmacy.java) allows patients to view their current pharmacy and if the patient were to ever change pharamcies, they could update it here as well
+  - [**ShowPreferences**](https://github.com/kevinvietnguyen/PrescriptionPalCS160/blob/main/app/src/main/java/edu/sjsu/android/prescriptionpal/ShowPreference.java) allows patients to edit their preferences on the application, for example notifications.
+  - [**PrescriptionDisplay**](https://github.com/kevinvietnguyen/PrescriptionPalCS160/blob/main/app/src/main/java/edu/sjsu/android/prescriptionpal/PrescriptionDisplay.java) allows patients to check in on their prescriptions and to see if they need to request a refill or not
+- [**InitialLoggedInScreen**](https://github.com/kevinvietnguyen/PrescriptionPalCS160/blob/main/app/src/main/java/edu/sjsu/android/prescriptionpal/InitialLoggedinScreen.java) :
+  - Once a pharmacy has successfully registered their pharmacy into the application, this will be their main home page with these three options
+    - Refills
+    - New Prescriptions
+    - Preferences
+  - [**ListOfNewPrescriptions**](https://github.com/kevinvietnguyen/PrescriptionPalCS160/blob/main/app/src/main/java/edu/sjsu/android/prescriptionpal/ListOfNewPrescriptions.java) allows pharmacies to fill new prescriptions that are requested by their customer
+  - [**ListOfRefills**](https://github.com/kevinvietnguyen/PrescriptionPalCS160/blob/main/app/src/main/java/edu/sjsu/android/prescriptionpal/ListOfRefills.java) allows and prepares pharamcies to refill their customer's prescription when they request a refill
+  - [**Preferences**](https://github.com/kevinvietnguyen/PrescriptionPalCS160/blob/main/app/src/main/java/edu/sjsu/android/prescriptionpal/Preferences.java) allows pharmacies to change their preferences so that they can stay comfortable using the application
 
-Next, let us go over how to set up the coding environment for our application. The primary IDE that we are using is Android Studio. Once that is installed onto your computer, you can go to any branch on our GitHub and clone it onto a directory on your computer. After that, you can go into Android Studio and open up a project by going to that directory you just cloned and open up the build.grade file. You may get an initial error where the IDE is unable to locate a certain file because the directory leads to another developer’s computer, it will be fixed automatically so do not worry. Once the build is loaded in, the developer is now free to code!
+## Build Instructions
+1. [Install Android Studio](https://developer.android.com/studio)
+2. Clone repository to a directory
+3. Once Android Studio is installed, go to the directory you saved the project into and make sure to open it through the build.gradle. 
+<p align="center">
+  <img src="demo/Opening file.png" width="300" alt="Opening file">
+</p>
 
-<img src="https://i.imgur.com/ZfcjBPd.png" width="300" />
+4. Once the repository is imported, go to Tools --> AVD Manager and "Create A Virtual Device"
+5. Feel free to download any Android OS
+6. Demo and try out our app!
 
+<br>
 
-A few things to note. Make sure you contact our database manager so that you are added into the Firebase project so you can access our database and FireStore. This will be exceptionally helpful to retrieve and save data. Also for Android Studio, it is extremely recommended for you to download an emulator that Android Studio can run. We recommend an Android 8 emulator.
-
-If you have any questions, feel free to contact any of the developers for help. And thank you for joining the development team for PrescriptionPal!
+<div align="center">
+  <br>
+  <h2>Registering an account</h2>
+  <img src="demo/Login.gif" alt="Login">
+  <br>
+  <br>
+  <h2>Patient Account Sign-up</h2>
+  <img src="demo/PatientAccount.gif" alt="PatientAccount">
+  <br>
+  <br>
+  <h2>PharmacyAccount</h2>
+  <img src="demo/PharmacyAccount.gif" alt="PharmacyAccount">
+  <br>
+</div>
